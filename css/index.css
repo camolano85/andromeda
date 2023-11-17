@@ -1,0 +1,53 @@
+
+/*FUENTE LETRA QUE SE APLICO EN BODY*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
+/*FUENTE LETRA PARA MAYUSCULAS*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/*UBICA MENU ARRIBA A LA DERECHA*/
+.label-menu{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+/*OCULTA EL CHECK*/
+.check-menu{
+    display: none;
+}
+
+/*TRAE EL MENU A SU UBICACION ORIGINAL AL OPRIMIR EL MENU*/
+.check-menu:checked + div{
+    transform: translate(0);
+}
+
+/*OCULTA EL MENU EN ESA UBICACION*/
+.enlaces-menu{
+    transform: translateX(-200%);
+}
+
+/*CUANDO EL DISPOSITIVO TIENE MINIMO 768PX OCULTA EL MENU Y DEJA LOS ENLACES*/
+@media screen and (min-width: 768px){
+    .label-menu{
+        display: none;
+    }
+    .enlaces-menu{
+        transform: translateX(0);
+}
+}
+
+
+
+
+    
+
