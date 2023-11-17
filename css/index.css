@@ -5,7 +5,13 @@
 /*FUENTE LETRA PARA MAYUSCULAS*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 
+/*TITULO*/
+header{
+    background-color: yellow;
+    
+}
 
+/*TITULOS*/
 h1,h2,h3,h4,h5,h6{
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
@@ -19,6 +25,7 @@ body{
     position: absolute;
     top: 16px;
     right: 16px;
+    z-index: 1;
 }
 
 /*OCULTA EL CHECK*/
@@ -33,7 +40,11 @@ body{
 
 /*OCULTA EL MENU EN ESA UBICACION*/
 .enlaces-menu{
-    transform: translateX(-200%);
+    
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-200%);
+    transition: all 1000ms ease-in-out;
 }
 
 /*CUANDO EL DISPOSITIVO TIENE MINIMO 768PX OCULTA EL MENU Y DEJA LOS ENLACES*/
@@ -42,8 +53,11 @@ body{
         display: none;
     }
     .enlaces-menu{
+        flex-direction: row;
+        gap: 20px;
         transform: translateX(0);
 }
+
 }
 
 
