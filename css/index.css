@@ -7,9 +7,20 @@
 
 /*TITULO*/
 header{
-    background-color: yellow;
+   display: flex;
+   justify-content: space-between;
     
 }
+
+.fa-facebook-square{
+    font-size: 32px;
+    color: black;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+
+}
+
 
 /*TITULOS*/
 h1,h2,h3,h4,h5,h6{
@@ -18,6 +29,22 @@ h1,h2,h3,h4,h5,h6{
 }
 body{
     font-family: 'Roboto', sans-serif;
+}
+
+/*ESTILOS MENU*/
+a{
+    color: orange;
+}
+a:link{
+    text-decoration: none;
+}
+
+a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+a:active{
+    color: black;
 }
 
 /*UBICA MENU ARRIBA A LA DERECHA*/
@@ -39,7 +66,7 @@ body{
 }
 
 /*OCULTA EL MENU EN ESA UBICACION*/
-.enlaces-menu{
+.enlaces-menu {
     
     display: flex;
     flex-direction: column;
@@ -54,10 +81,18 @@ body{
     }
     .enlaces-menu{
         flex-direction: row;
-        gap: 20px;
+        justify-content: space-evenly;
         transform: translateX(0);
 }
 
+}
+
+/*CUANDO EL DISPOSITIVO TIENE MINIMO 1024PX OCULTA EL MENU Y DEJA LOS ENLACES*/
+@media screen and (min-width: 1024px){
+    .enlaces-menu{
+        justify-content: end;
+        gap: 20px;
+    }
 }
 
 
