@@ -5,6 +5,11 @@
 /*FUENTE LETRA PARA MAYUSCULAS*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 
+:root{
+    --c-principal: green;
+    --c-secundario: blue;
+}
+
 /*TITULO*/
 header{
    display: flex;
@@ -33,7 +38,7 @@ body{
 
 /*ESTILOS MENU*/
 a{
-    color: orange;
+    color: var(--c-principal)
 }
 a:link{
     text-decoration: none;
